@@ -18,8 +18,18 @@ export const charactersAPI = {
         .then(response => {
             return response
         });
-    }   
-   
+    }  
+}
+
+export const episodesAPI = {
+    
+    getEpisodes (currentPage) {
+        //debugger;
+        return axios.get (`https://rickandmortyapi.com/api/episode?page=${currentPage}`)
+        .then(response => {
+            return response
+        });
+    }  
 }
 
 
