@@ -22,3 +22,11 @@
         }
     }
 }
+
+.formsBlock {
+    display: flex;
+    flex-direction: row;
+    .form {
+        margin-left: 10px;
+    }    
+}

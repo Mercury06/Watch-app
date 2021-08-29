@@ -18,7 +18,33 @@ export const charactersAPI = {
         .then(response => {
             return response
         });
-    }  
+    },
+
+    getGender (gender) {
+        //debugger;
+        return axios.get (`https://rickandmortyapi.com/api/character?gender=${gender}`)
+        .then(response => {
+            return response
+        });
+    },
+
+    getSpecies (species) {
+        //debugger;
+        return axios.get (`https://rickandmortyapi.com/api/character?species=${species}`)
+        .then(response => {
+            return response
+        });
+    },
+
+    getStatus (status) {
+        //debugger;
+        return axios.get (`https://rickandmortyapi.com/api/character?status=${status}`)
+        .then(response => {
+            return response
+        });
+    },
+
+
 }
 
 export const episodesAPI = {

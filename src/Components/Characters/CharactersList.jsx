@@ -5,6 +5,11 @@ import Paginator from '../common/Paginator/Paginator';
 import s from './../Characters/Characters.module.scss';
 import {charactersAPI} from './../../Api/api';
 import Modal from '../UI/Modal/Modal';
+import SelectGenderForm from '../UI/Tables/Forms/SelectForm/GenderForm/SelectGenderForm';
+import SelectSpeciesForm from '../UI/Tables/Forms/SelectForm/SpeciesForm/SelectSpeciesForm';
+import SelectStatusForm from '../UI/Tables/Forms/SelectForm/StatusForm/SelectStatusForm';
+
+
 
 const CharactersList = () => {    
 
@@ -14,6 +19,9 @@ const CharactersList = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [modal, setModal] = useState (false);
     const [selectedId, setSelectedId] = useState({});
+    const [onGender, setOnGender] = useState('');
+    const [onSpecies, setOnSpecies] = useState('');
+    const [onStatus, setOnStatus] = useState('');
 
     useEffect(()=>{        
         axios.get('https://rickandmortyapi.com/api/character').then((res)=>{
@@ -41,12 +49,47 @@ const CharactersList = () => {
         } catch (err) {
         console.log(err)
     }};
-
    
     const onAddToModal = (obj) => {
         setSelectedId (obj)
         console.log (obj, 'onAddToModal')
         console.log (obj.name)
+    }
+
+    const onSelectGender = (e) => {
+        let gender = e.target.value;
+        console.log (gender);    
+        setOnGender (gender);
+        charactersAPI.getGender (gender).then ( (res) => {
+            let characters = res.data.results;
+            let pagesCount = res.data.info.pages;
+            setCharacters (characters);      
+            setPagesCount(pagesCount);     
+        })
+    }
+
+    const onSelectSpecies = (e) => {
+        let species = e.target.value;
+        console.log (species);    
+        setOnSpecies (species);
+        charactersAPI.getSpecies (species).then ( (res) => {
+            let characters = res.data.results;
+            let pagesCount = res.data.info.pages;
+            setCharacters (characters);      
+            setPagesCount(pagesCount);     
+        })
+    }
+
+    const onSelectStatus = (e) => {
+        let status = e.target.value;
+        console.log (status);    
+        setOnStatus (status);
+        charactersAPI.getStatus (status).then ( (res) => {
+            let characters = res.data.results;
+            let pagesCount = res.data.info.pages;
+            setCharacters (characters);      
+            setPagesCount(pagesCount);     
+        })
     }
    
 
@@ -58,6 +101,11 @@ const CharactersList = () => {
             </Modal>
             <div className={s.paginator}>
                 <Paginator pagesCount={pagesCount} currentPage={currentPage} onPageChanged={onPageChanged}/>
+            </div>
+            <div className={s.formsBlock}>
+                <SelectGenderForm onSelectGender={onSelectGender} />
+                <SelectSpeciesForm onSelectSpecies={onSelectSpecies} />
+                <SelectStatusForm onSelectStatus={onSelectStatus} />
             </div>    
             <div>
                 {characters.map( c => <Characteritem key = {c.id+c.name} id={c.id}                                                                                                       
