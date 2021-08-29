@@ -1,0 +1,26 @@
+.modal {
+    position: fixed;
+    // top: 36%;
+    // left: 36%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+    margin-top: 10%;
+    margin-left: 36%;
+    padding: 25px;
+    background: cornsilk;
+    border-radius: 16px;
+    width: 250px;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

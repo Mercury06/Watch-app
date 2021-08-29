@@ -1,0 +1,22 @@
+.app-wrapper {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // min-height: 100vh;
+    display: grid;
+    /*margin: auto;*/
+    min-height: max-content;
+    grid-template-areas: "h"
+                         "c";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 1fr;
+}
+.app-wrapper-content {
+    grid-area: c;
+    background-color: #8b8b43;
+    padding: 10px;
+    margin-top: 2px; 
+    
+    height: max-content;
+  }
+  
