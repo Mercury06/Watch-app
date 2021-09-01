@@ -13,10 +13,10 @@ return (
           <NavLink to="/episodes" activeClassName={s.activeLink}>Episodes</NavLink>
         </div>
         <div className={s.item}>
-          <NavLink to="/location" activeClassName={s.activeLink}>Location</NavLink>
+          <NavLink to="/locations" activeClassName={s.activeLink}>Locations</NavLink>
         </div>
         <div className={s.item}>
-        <NavLink to="/mywatchlist" activeClassName={s.activeLink}>My watch list</NavLink>          
+        <NavLink to="/watchlist" activeClassName={s.activeLink}>My watch list</NavLink>          
         </div>
            
       </nav>

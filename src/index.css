@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.formChecked {
+  
+  width: 1em;
+  height: 1em;
+  margin-top: .25em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(0,0,0,.25);
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  margin-right: 1rem!important;
+  border-radius: .25em;  
+  cursor: pointer;
+}
+
+.formChecked + label {
+  font-size: 20px;
+}
+
+.formChecked:checked {
+  background-image: url(./Components/UI/Icons/check.svg);
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  margin-right: 1rem!important;
+  border-radius: .25em;
+  cursor: pointer;
+}
+
+.formOnChecked + label {
+  text-decoration: line-through;
+  font-size: 20px;
+}
+
+.formChecked:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0px 0px 3px rgb(93, 93, 250);
+}
+
+
+

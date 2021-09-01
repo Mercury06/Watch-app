@@ -8,7 +8,7 @@ const Modal = ({ person, visible, setVisible }) => {
     if (visible) {
         rootClasses.push(s.active);
     }
-    //debugger;
+
     return (
         <div className={rootClasses.join(' ')} onClick={()=>setVisible(false)}>
             <div className={s.modalContent} onClick={(e)=>e.stopPropagation()}>    

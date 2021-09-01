@@ -1,12 +1,13 @@
-import React, { createContext } from 'react';
-import s from './App.scss';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
 import { Redirect, Route, Switch } from "react-router-dom";
 import CharactersList from './Components/Characters/CharactersList';
 import Episodes from './Components/Episodes/Episodes';
+import MyWatchList from './Components/Watchlist/Watchlist.jsx';
+import Locations from './Components/Locations/Locations';
+import PageNotFound from './Components/common/PagePlug/PageNotFound';
 
-
-//export const AppContext = createContext ({});
 
 function App() {
   return (
@@ -20,16 +21,13 @@ function App() {
 
           <Route path='/episodes' render={() => <Episodes />} />
 
-          {/* <Route path='/profile/:userId?' render={() => <ProfileContainer />} /> */}
+          <Route path='/locations' render={() => <Locations />} />
+
+          <Route path='/watchlist' render={() => <MyWatchList /> } />   
+
+          <Route path='*' render={() => <PageNotFound />} />     
           
-          {/* 
-
-          <Route path='/location' render={() => <PageDev />} />
-
-          <Route path='/mywatchlist' render={() => <PageDev />} />           */}
-
-          {/* <Route path='*' render={() => <PagePlugNotFound />} /> */}
-        </Switch>
+      </Switch>
       </div>    
     </div>
   );

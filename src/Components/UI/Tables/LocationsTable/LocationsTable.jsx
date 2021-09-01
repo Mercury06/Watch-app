@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const EpisodesTable = ({episodes, ...props}) => {
+const LocationsTable = ({ locations }) => {
     return (
         <div className="container">
           
@@ -10,18 +9,18 @@ const EpisodesTable = ({episodes, ...props}) => {
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>air_date</th>
-                <th>episode</th>
+                <th>type</th>
+                <th>dimension</th>
                 <th>created</th>
             </tr>
         </thead>
         <tbody>
-            { episodes.map (item =>(
-                <tr key={item.id+item.episode}>
+            { locations.map (item =>(
+                <tr key={item.id+item.created}>
                     <td>{item.id}</td>
                     <td>{item.name}</td>
-                    <td>{item.air_date}</td>
-                    <td>{item.episode}</td>
+                    <td>{item.type}</td>
+                    <td>{item.dimension}</td>
                     <td>{item.created}</td>
                 </tr>
             ))}
@@ -31,4 +30,4 @@ const EpisodesTable = ({episodes, ...props}) => {
     )
 }
 
-export default EpisodesTable;
+export default LocationsTable;

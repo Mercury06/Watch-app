@@ -1,44 +1,36 @@
 import * as axios from 'axios';
 
-// const instance = axios.create({    
-//     baseURL: `https://rickandmortyapi.com/api/`,   
-// });
-
-// {
-//     "characters": "https://rickandmortyapi.com/api/character",
-//     "locations": "https://rickandmortyapi.com/api/location",
-//     "episodes": "https://rickandmortyapi.com/api/episode"
-//   }
+const baseURL = 'https://rickandmortyapi.com/api/';
 
 export const charactersAPI = {
     
     getCharacters (currentPage) {
-        //debugger;
-        return axios.get (`https://rickandmortyapi.com/api/character?page=${currentPage}`)
+        
+        return axios.get ( baseURL+`character?page=${currentPage}`)
         .then(response => {
             return response
         });
     },
 
     getGender (gender) {
-        //debugger;
-        return axios.get (`https://rickandmortyapi.com/api/character?gender=${gender}`)
+       
+        return axios.get ( baseURL+`character?gender=${gender}`)
         .then(response => {
             return response
         });
     },
 
     getSpecies (species) {
-        //debugger;
-        return axios.get (`https://rickandmortyapi.com/api/character?species=${species}`)
+       
+        return axios.get ( baseURL+`character?species=${species}`)
         .then(response => {
             return response
         });
     },
 
     getStatus (status) {
-        //debugger;
-        return axios.get (`https://rickandmortyapi.com/api/character?status=${status}`)
+        
+        return axios.get ( baseURL+`character?status=${status}`)
         .then(response => {
             return response
         });
@@ -50,12 +42,40 @@ export const charactersAPI = {
 export const episodesAPI = {
     
     getEpisodes (currentPage) {
-        //debugger;
-        return axios.get (`https://rickandmortyapi.com/api/episode?page=${currentPage}`)
+      
+        return axios.get ( baseURL+`episode?page=${currentPage}`)
         .then(response => {
             return response
         });
     }  
+}
+
+export const locationsAPI = {
+    
+    getLocations (currentPage) {
+       
+        return axios.get ( baseURL+`location?page=${currentPage}`)
+        .then(response => {
+            return response
+        });
+    },
+
+    getType (type) {
+      
+        return axios.get ( baseURL+`location?type=${type}`)
+        .then(response => {
+            return response
+        });
+    },
+
+    getDimension (dimension) {
+        
+        return axios.get ( baseURL+`location?dimension=${dimension}`)
+        .then(response => {
+            return response
+        });
+    },
+
 }
 
 

@@ -15,7 +15,7 @@ const Episodes = () => {
   const [pagesCount, setPagesCount] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  //debugger;
+  
   useEffect (()=>{        
     axios.get('https://rickandmortyapi.com/api/episode').then((res)=>{
         
@@ -29,22 +29,18 @@ const Episodes = () => {
         
         setEpisodes(episodes);
         setPagesCount(pagesCount);
-        
-        console.log(episodes);
-        console.log(res.data);
-        
     })
 },[]);
 
 const onPageChanged = async (pageNumber) => { 
-  //debugger;
+  
   try {
   episodesAPI.getEpisodes (pageNumber).then ( (res) => {
       let episodes = res.data.results;
       setEpisodes (episodes);           
       setCurrentPage (pageNumber);                       
   })
-  //setCurrentPage(pageNumber)
+ 
   } catch (err) {
   console.log(err)
 }};

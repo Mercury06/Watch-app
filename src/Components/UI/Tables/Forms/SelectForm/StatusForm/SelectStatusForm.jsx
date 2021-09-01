@@ -1,6 +1,6 @@
 import React from  'react';
 import s from './SelectStatusForm.module.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const SelectStatusForm = ({onSelectStatus}) => {
     return (
