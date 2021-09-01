@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/watch-app/static/css/main.9795c531.chunk.css",
+    "main.js": "/watch-app/static/js/main.472501b9.chunk.js",
+    "main.js.map": "/watch-app/static/js/main.472501b9.chunk.js.map",
+    "runtime-main.js": "/watch-app/static/js/runtime-main.22d93bc2.js",
+    "runtime-main.js.map": "/watch-app/static/js/runtime-main.22d93bc2.js.map",
+    "static/css/2.818011ed.chunk.css": "/watch-app/static/css/2.818011ed.chunk.css",
+    "static/js/2.016bb3ae.chunk.js": "/watch-app/static/js/2.016bb3ae.chunk.js",
+    "static/js/2.016bb3ae.chunk.js.map": "/watch-app/static/js/2.016bb3ae.chunk.js.map",
+    "index.html": "/watch-app/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/watch-app/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.9795c531.chunk.css.map": "/watch-app/static/css/main.9795c531.chunk.css.map",
+    "static/js/2.016bb3ae.chunk.js.LICENSE.txt": "/watch-app/static/js/2.016bb3ae.chunk.js.LICENSE.txt",
+    "static/media/ava-rez.30a3262a.jpg": "/watch-app/static/media/ava-rez.30a3262a.jpg",
+    "static/media/index.css": "/watch-app/static/media/check.f9669f86.svg",
+    "static/media/spin.c0a3ccc0.gif": "/watch-app/static/media/spin.c0a3ccc0.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22d93bc2.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.016bb3ae.chunk.js",
+    "static/css/main.9795c531.chunk.css",
+    "static/js/main.472501b9.chunk.js"
+  ]
+}
