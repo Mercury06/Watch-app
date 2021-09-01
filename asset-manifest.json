@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/watch-app/static/css/main.8299f546.chunk.css",
-    "main.js": "/watch-app/static/js/main.75bbba46.chunk.js",
-    "main.js.map": "/watch-app/static/js/main.75bbba46.chunk.js.map",
+    "main.js": "/watch-app/static/js/main.43eb4674.chunk.js",
+    "main.js.map": "/watch-app/static/js/main.43eb4674.chunk.js.map",
     "runtime-main.js": "/watch-app/static/js/runtime-main.22d93bc2.js",
     "runtime-main.js.map": "/watch-app/static/js/runtime-main.22d93bc2.js.map",
     "static/css/2.818011ed.chunk.css": "/watch-app/static/css/2.818011ed.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.818011ed.chunk.css",
     "static/js/2.37ef32cd.chunk.js",
     "static/css/main.8299f546.chunk.css",
-    "static/js/main.75bbba46.chunk.js"
+    "static/js/main.43eb4674.chunk.js"
   ]
 }
